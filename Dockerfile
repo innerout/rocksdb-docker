@@ -9,5 +9,5 @@ WORKDIR examples
 RUN make all
 RUN mkdir /test
 WORKDIR /test
-RUN wget https://github.com/innerout/rocksdb-docker/blob/main/Makefile
+RUN wget https://raw.githubusercontent.com/innerout/rocksdb-docker/main/Makefile
 RUN wget https://raw.githubusercontent.com/innerout/rocksdb-docker/main/test.cpp
