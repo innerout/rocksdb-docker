@@ -11,3 +11,4 @@ RUN mkdir /test
 WORKDIR /test
 RUN wget https://raw.githubusercontent.com/innerout/rocksdb-docker/main/Makefile
 RUN wget https://raw.githubusercontent.com/innerout/rocksdb-docker/main/test.cpp
+RUN wget https://raw.githubusercontent.com/innerout/rocksdb-docker/main/test2.cpp
