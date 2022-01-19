@@ -8,15 +8,11 @@ int main()
 {
 	rocksdb::DB *db;
 	rocksdb::Options options;
-	options.create_if_missing = true;
+	std::string value;
+
+	options.create_if_missing = false;
 	rocksdb::Status status = rocksdb::DB::Open(options, "/tmp/testdb", &db);
 
-	assert(status.ok()); //Database opened
-
-	status = db->Put(WriteOptions(), "key1", "value");
-	assert(status.ok()); //Put succeeds
-
-	std::string value;
 	status = db->Get(ReadOptions(), "key1", &value);
 	assert(status.ok());
 	assert(value == "value"); //Get succeeds and returns expected value
