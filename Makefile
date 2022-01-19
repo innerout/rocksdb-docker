@@ -1,6 +1,8 @@
 CXX=g++
 CXXFLAGS=-lrt -ldl -lsnappy -lgflags -lz -lzstd -lbz2 -ldl -lpthread -Bstatic -std=c++11
 
+all: test test2
+
 test:
 	$(CXX) test.cpp -o test /rocksdb/librocksdb.a -I/rocksdb/include $(CXXFLAGS)
 test2:
