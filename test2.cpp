@@ -12,6 +12,7 @@ int main()
 
 	options.create_if_missing = false;
 	rocksdb::Status status = rocksdb::DB::Open(options, "/tmp/testdb", &db);
+	assert(status.ok());
 
 	status = db->Get(ReadOptions(), "key1", &value);
 	assert(status.ok());
